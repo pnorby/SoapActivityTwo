@@ -27,7 +27,7 @@ import javax.xml.bind.annotation.*;
 @XmlRootElement(name="dwml")
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "dwmlType", propOrder = {
-    "latLonList"
+        "latLonList"
 })
 public class DwmlType {
 

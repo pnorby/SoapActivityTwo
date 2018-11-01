@@ -15,8 +15,7 @@ public class NdfdXMLBindingStubTest {
         NdfdXMLBindingStub binding = (NdfdXMLBindingStub) new NdfdXMLLocator().getndfdXMLPort();
 
         String result = binding.latLonListZipCode("53597");
-        System.out.println(result);
-        JAXBContext jaxBContext = JAXBContext.newInstance();
+        JAXBContext jaxBContext = JAXBContext.newInstance(DwmlType.class);
         Unmarshaller jaxbUnmarshaller = jaxBContext.createUnmarshaller();
 
         DwmlType dwml = (DwmlType) jaxbUnmarshaller.unmarshal(new StringReader(result));
